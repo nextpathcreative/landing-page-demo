@@ -1,0 +1,17 @@
+# Wrangler local state & cache
+.wrangler/
+
+# Local dev secrets — never commit these
+.dev.vars
+.dev.vars.*
+
+# Node (if you ever install packages)
+node_modules/
+package-lock.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
