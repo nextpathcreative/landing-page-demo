@@ -1,0 +1,187 @@
+/* =====================================================================
+   Cornerstone Plumbing — LANDING tokens (frozen, self-contained)
+   ---------------------------------------------------------------------
+   The shipped "Tidewater / Modern Trades" palette expressed through the
+   project's two-tier token system: base scale (raw values) → semantic
+   aliases (role names used in style.css). This file is the ONLY place
+   landing brand values live — change a value here, the page reskins.
+
+   Disciplined colour roles (do not blur them):
+     • BLUE   (brand)  → trust, structure, icons, links
+     • ORANGE (action) → CTAs ONLY, nothing else
+     • GOLD   (rating) → star ratings only
+     • GREEN  (success)→ live / positive status only
+     • NAVY   (ink)    → dark surfaces
+   ===================================================================== */
+
+:root {
+
+  /* ============================================================
+     BASE COLORS — Brand (cobalt ramp, lightest → darkest)
+     --400 is the main vivid brand; --300 is the muted "soft" blue.
+  ============================================================ */
+  --base-color-brand--100: #ecf1fd;   /* lightest wash — behind icons / hovers */
+  --base-color-brand--200: #cbdaf8;   /* tint border */
+  --base-color-brand--300: #5e78b8;   /* muted soft blue — eyebrows, accents */
+  --base-color-brand--400: #1d4ed8;   /* main — confident cobalt */
+  --base-color-brand--500: #1a43bd;   /* hover */
+  --base-color-brand--600: #16399e;   /* press */
+  --base-color-brand--700: #1a3c8c;   /* deep — large fill surfaces */
+  --base-color-brand--800: #16294f;   /* ink-2 */
+  --base-color-brand--900: #0c1e40;   /* ink — darkest navy surface */
+
+  /* ============================================================
+     EXTENDED BASE COLORS — roles the standard brand scale can't model
+     (orange action, gold rating). Kept two-tier for consistency.
+  ============================================================ */
+  --base-color-action--400: #e2491d;  /* vermilion — click colour */
+  --base-color-action--500: #c83d14;  /* hover */
+  --base-color-action--600: #a8330f;  /* press */
+
+  --base-color-rating--gold: #e8a100;  /* the only place gold appears */
+
+  /* ============================================================
+     BASE COLORS — Neutral (cool slate ramp: paper → lines → ink)
+  ============================================================ */
+  --base-color-neutral--white: #ffffff;
+  --base-color-neutral--100:   #f3f6fb;  /* cool off-white (paper-2) */
+  --base-color-neutral--200:   #e9eff7;  /* paper-3 */
+  --base-color-neutral--300:   #e3e9f1;  /* line */
+  --base-color-neutral--400:   #cbd5e3;  /* line-strong */
+  --base-color-neutral--500:   #7e8c95;  /* text subtle */
+  --base-color-neutral--600:   #51616b;  /* text muted */
+  --base-color-neutral--700:   #15242e;  /* text primary (near-black slate) */
+  --base-color-neutral--800:   #16294f;  /* ink-2 */
+  --base-color-neutral--900:   #0c1e40;  /* ink */
+  --base-color-neutral--black: #000000;
+
+  /* ============================================================
+     BASE COLORS — System
+  ============================================================ */
+  --base-color-system--success:      #1b7f52;
+  --base-color-system--success-bg:   #e6f3ec;
+  --base-color-system--warning:      #fcf8d8;
+  --base-color-system--error:        #c0392b;
+  --base-color-system--focus:        var(--base-color-brand--400);
+
+  /* ============================================================
+     SEMANTIC — Landing colour roles
+     style.css references THESE, never the base scale directly.
+     (Names mirror the shipped design system for a 1:1 port.)
+  ============================================================ */
+  --accent:        var(--base-color-brand--400);
+  --accent-hover:  var(--base-color-brand--500);
+  --accent-press:  var(--base-color-brand--600);
+  --accent-tint:   var(--base-color-brand--100);
+  --accent-tint2:  var(--base-color-brand--200);
+  --accent-deep:   var(--base-color-brand--700);
+  --accent-soft:   var(--base-color-brand--300);
+
+  --cta:       var(--base-color-action--400);
+  --cta-hover: var(--base-color-action--500);
+  --cta-press: var(--base-color-action--600);
+  --on-cta:    var(--base-color-neutral--white);
+
+  --ink:        var(--base-color-neutral--900);
+  --ink-2:      var(--base-color-neutral--800);
+  --fg:         var(--base-color-neutral--700);
+  --fg-muted:   var(--base-color-neutral--600);
+  --fg-subtle:  var(--base-color-neutral--500);
+  --paper:      var(--base-color-neutral--white);
+  --paper-2:    var(--base-color-neutral--100);
+  --paper-3:    var(--base-color-neutral--200);
+  --line:       var(--base-color-neutral--300);
+  --line-strong:var(--base-color-neutral--400);
+  --on-accent:  var(--base-color-neutral--white);
+
+  --ok:     var(--base-color-system--success);
+  --ok-bg:  var(--base-color-system--success-bg);
+  --star:   var(--base-color-rating--gold);
+  --danger: var(--base-color-system--error);
+
+  /* ============================================================
+     SEMANTIC — CF aliases (so cf-utilities colour classes resolve
+     to the landing palette too)
+  ============================================================ */
+  --text-color--text-primary:   var(--fg);
+  --text-color--text-secondary: var(--fg-muted);
+  --text-color--text-alternate: var(--paper);
+
+  --background-color--background-primary:   var(--ink);
+  --background-color--background-secondary: var(--accent);
+  --background-color--background-alternate: var(--paper);
+
+  --border-color--border-primary:   var(--line);
+  --border-color--border-secondary: var(--accent);
+  --border-color--border-alternate: var(--ink-2);
+
+  --link-color--link-primary:   var(--accent);
+  --link-color--link-secondary: var(--fg);
+  --link-color--link-alternate: var(--paper);
+
+  /* ============================================================
+     TYPOGRAPHY
+  ============================================================ */
+  --font-display: 'Archivo', system-ui, -apple-system, sans-serif;
+  --font-body:    'Public Sans', system-ui, -apple-system, sans-serif;
+  --display-weight: 800;
+
+  --base-font-weight--regular:   400;
+  --base-font-weight--medium:    500;
+  --base-font-weight--semibold:  600;
+  --base-font-weight--bold:      700;
+  --base-font-weight--extrabold: 800;
+
+  --font-weight--heading:  var(--base-font-weight--extrabold);
+  --font-weight--body:     var(--base-font-weight--regular);
+  --font-weight--label:    var(--base-font-weight--semibold);
+  --font-weight--emphasis: var(--base-font-weight--bold);
+
+  --line-height--heading: 1.1;
+  --line-height--body:    1.55;
+  --line-height--ui:      1.25;
+
+  /* ============================================================
+     RADIUS  (source r1..r4 + full)
+  ============================================================ */
+  --base-radius--sm:   6px;
+  --base-radius--md:   10px;
+  --base-radius--lg:   14px;
+  --base-radius--xl:   18px;
+  --base-radius--full: 9999px;
+
+  --r1: var(--base-radius--sm);
+  --r2: var(--base-radius--md);
+  --r3: var(--base-radius--lg);
+  --r4: var(--base-radius--xl);
+  --rf: var(--base-radius--full);
+
+  --radius-card:   var(--base-radius--lg);
+  --radius-button: var(--base-radius--md);
+  --radius-badge:  var(--base-radius--full);
+
+  /* ============================================================
+     SECTION PADDING TIERS — consumed by cf-utilities .padding-section-*
+     Tuned to the shipped clamps. (cf-utilities media queries scale these
+     down on tablet/phone — global responsive rhythm.)
+  ============================================================ */
+  --padding-section-small:  clamp(40px, 5vw, 72px);   /* tight bands (final CTA) */
+  --padding-section-medium: clamp(56px, 7vw, 104px);  /* standard sections */
+  --padding-section-large:  clamp(100px, 9vw, 152px); /* wave-transition sections */
+
+  /* ============================================================
+     CONTAINER WIDTHS — landing runs wide (1440px) like the shipped build
+  ============================================================ */
+  --container-max-small:  48rem;
+  --container-max-medium: 64rem;
+  --container-max-large:  90rem;  /* 1440px — wider than the 80rem default */
+
+  /* ============================================================
+     ELEVATION + MOTION
+  ============================================================ */
+  --shadow-sm: 0 1px 2px rgba(11,35,48,0.05);
+  --shadow-md: 0 8px 24px -12px rgba(11,35,48,0.20), 0 2px 6px rgba(11,35,48,0.05);
+  --shadow-lg: 0 28px 60px -24px rgba(11,35,48,0.34);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cornerstone Plumbing — Seattle plumbers, upfront and on time</title>
+<meta name="description" content="Licensed Seattle plumbers. Free estimates, upfront pricing, and a straight answer — we tell you what's wrong and what it costs before we touch anything. Book a visit online." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Public+Sans:wght@400;500;600;700&display=swap" />
+
+<!-- Self-contained landing stack — local CSS load order -->
+<link rel="stylesheet" href="reset.css" />
+<link rel="stylesheet" href="tokens.css" />
+<link rel="stylesheet" href="cf-utilities.css" />
+<link rel="stylesheet" href="style.css" />
+
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ Emergency banner ============ -->
+<div class="landing_emergency">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="landing_emergency_inner">
+        <span class="dot"></span>
+        <span>Burst pipe or no water right now? Call Mark — <a href="tel:+12065550142"><span class="u">(206) 555-0142</span></a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ Header (no nav, no exit doors) ============ -->
+<header class="landing_header">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="landing_header_component">
+        <div class="brand" id="brandTop" role="button" tabindex="0" aria-label="Cornerstone Plumbing — back to top">
+          <span class="mk">C</span>
+          <span class="brand-text">
+            <span class="nm">Cornerstone Plumbing</span>
+            <span class="sub">Seattle &amp; nearby</span>
+          </span>
+        </div>
+        <span class="landing_header_spacer"></span>
+        <a class="calllink phone" href="tel:+12065550142"><i data-lucide="phone"></i><span class="num">(206) 555-0142</span></a>
+        <a class="btn btn-outline-cta" id="headerCta" href="#" data-book-modal>Book a visit</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ Hero + scheduler ============ -->
+<section class="section_landing-hero">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="landing_hero_component">
+        <div class="landing_hero_copy">
+          <p class="eyebrow">Licensed plumbers · Seattle &amp; nearby</p>
+          <h1>Plumbing you don't have to <span class="accent">worry about</span> — in Seattle and nearby.</h1>
+          <p class="lede">Licensed, upfront, and on time. We'll tell you exactly what's wrong, what it costs, and what your options are — before we touch anything. Free estimates, no surprises.</p>
+          <div class="landing_hero_actions">
+            <a class="calllink" href="#" data-book-modal><i data-lucide="calendar"></i><span class="u">See available times</span></a>
+            <a class="calllink" href="tel:+12065550142"><i data-lucide="phone"></i>Or call Mark: <span class="u">(206) 555-0142</span></a>
+          </div>
+          <div class="landing_hero_pills">
+            <span class="pill pill-accent"><i data-lucide="star" class="star"></i>4.9 from 312 Google reviews</span>
+            <span class="pill"><i data-lucide="shield-check"></i>Licensed #PL-12345</span>
+            <span class="pill"><i data-lucide="map-pin"></i>17 years in Seattle</span>
+          </div>
+        </div>
+        <div class="sched" id="hero-scheduler" aria-label="Book a visit">
+          <!-- populated by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Trust strip ============ -->
+<section class="section_landing-trust-strip">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="landing_trust-strip_component">
+        <div class="landing_trust-strip_item">
+          <span class="landing_trust-strip_item__icon"><i data-lucide="shield-check"></i></span>
+          <div>
+            <span class="landing_trust-strip_item__title">Licensed &amp; insured</span>
+            <span class="landing_trust-strip_item__text">License #PL-12345, fully insured for your protection</span>
+          </div>
+        </div>
+        <div class="landing_trust-strip_item">
+          <span class="landing_trust-strip_item__icon"><i data-lucide="map-pin"></i></span>
+          <div>
+            <span class="landing_trust-strip_item__title">17 years in Seattle</span>
+            <span class="landing_trust-strip_item__text">local crew, not a franchise or a call center</span>
+          </div>
+        </div>
+        <div class="landing_trust-strip_item">
+          <span class="landing_trust-strip_item__icon"><i data-lucide="star" class="star"></i></span>
+          <div>
+            <span class="landing_trust-strip_item__title">4.9 from 312 reviews</span>
+            <span class="landing_trust-strip_item__text">real neighbors, real jobs across Seattle</span>
+          </div>
+        </div>
+        <div class="landing_trust-strip_item">
+          <span class="landing_trust-strip_item__icon"><i data-lucide="receipt"></i></span>
+          <div>
+            <span class="landing_trust-strip_item__title">Upfront pricing</span>
+            <span class="landing_trust-strip_item__text">you approve the price before we start</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Services ============ -->
+<section class="section_landing-services" id="services">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-medium">
+        <div class="landing_section-head" data-reveal>
+          <p class="eyebrow">What we fix</p>
+          <h2 class="h2">Most of what we do, day in and day out</h2>
+          <p class="lede">If it's plumbing and it's in your home, we can help — just ask.</p>
+        </div>
+        <div class="landing_services_component" data-reveal-group>
+          <div class="landing_services_card" data-reveal>
+            <div class="landing_services_card__icon"><i data-lucide="flame"></i></div>
+            <h3 class="h3 landing_services_card__title">Water heater repair &amp; replacement</h3>
+            <p class="landing_services_card__body">No hot water, or a tank that's leaking or past its years? We repair when it's worth it and replace when it's not — and tell you honestly which is which.</p>
+          </div>
+          <div class="landing_services_card" data-reveal>
+            <div class="landing_services_card__icon"><i data-lucide="waves"></i></div>
+            <h3 class="h3 landing_services_card__title">Drain cleaning &amp; clogs</h3>
+            <p class="landing_services_card__body">Slow sinks, backed-up showers, or a main line that won't clear. We find the cause, not just the symptom, so it doesn't come back next week.</p>
+          </div>
+          <div class="landing_services_card" data-reveal>
+            <div class="landing_services_card__icon"><i data-lucide="droplets"></i></div>
+            <h3 class="h3 landing_services_card__title">Leak detection &amp; repair</h3>
+            <p class="landing_services_card__body">Hidden leaks waste water and wreck drywall. We track them down without tearing your house apart and fix them right the first time.</p>
+          </div>
+          <div class="landing_services_card" data-reveal>
+            <div class="landing_services_card__icon"><i data-lucide="snowflake"></i></div>
+            <h3 class="h3 landing_services_card__title">Burst &amp; frozen pipes</h3>
+            <p class="landing_services_card__body">Fast response when a pipe lets go. We stop the water, dry you out, and get you back to normal — emergencies included.</p>
+          </div>
+          <div class="landing_services_card" data-reveal>
+            <div class="landing_services_card__icon"><i data-lucide="shower-head"></i></div>
+            <h3 class="h3 landing_services_card__title">Toilets, faucets &amp; fixtures</h3>
+            <p class="landing_services_card__body">Running toilets, dripping faucets, new fixtures installed clean and level. The small jobs done properly.</p>
+          </div>
+          <div class="landing_services_card" data-reveal>
+            <div class="landing_services_card__icon"><i data-lucide="git-branch"></i></div>
+            <h3 class="h3 landing_services_card__title">Repiping &amp; water lines</h3>
+            <p class="landing_services_card__body">Old galvanized or failing pipes replaced with modern materials built to last decades — quoted clearly before any work begins.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Recent work (before / after) ============ -->
+<section class="section_landing-work" id="work">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-medium">
+        <div class="landing_section-head" data-reveal>
+          <p class="eyebrow">Recent work</p>
+          <h2 class="h2">See the difference — drag to reveal</h2>
+          <p class="lede">Real jobs around Seattle. Grab the slider on any photo to wipe between before and after, and filter by the kind of work you need.</p>
+        </div>
+        <div class="landing_work_tabs" role="tablist" data-reveal>
+          <button class="work-tab on" data-cat="all" role="tab"><i data-lucide="layout-grid"></i>All work</button>
+          <button class="work-tab" data-cat="water-heaters" role="tab"><i data-lucide="flame"></i>Water heaters</button>
+          <button class="work-tab" data-cat="drains" role="tab"><i data-lucide="waves"></i>Drains</button>
+          <button class="work-tab" data-cat="leaks" role="tab"><i data-lucide="droplets"></i>Leaks</button>
+          <button class="work-tab" data-cat="repiping" role="tab"><i data-lucide="git-branch"></i>Repiping</button>
+          <button class="work-tab" data-cat="fixtures" role="tab"><i data-lucide="shower-head"></i>Fixtures</button>
+        </div>
+        <div class="landing_work_component" data-reveal-group>
+
+          <figure class="job" data-cat="water-heaters" data-reveal>
+            <div class="ba" style="--pos:30%">
+              <div class="ba-pane ba-after"><span class="ba-glyph"><i data-lucide="flame"></i></span></div>
+              <div class="ba-pane ba-before"><span class="ba-glyph"><i data-lucide="flame"></i></span></div>
+              <span class="ba-lab lab-before">Before</span>
+              <span class="ba-lab lab-after">After</span>
+              <div class="ba-handle" role="slider" tabindex="0" aria-label="Drag to compare before and after"><i data-lucide="chevrons-left-right"></i></div>
+            </div>
+            <figcaption><span class="job-ic"><i data-lucide="flame"></i></span><span class="job-meta"><b>Old tank swapped for tankless</b><span class="job-cat">Ballard · Water heaters</span><span class="job-desc">Swapped a leaking 50-gallon tank for a wall-mounted tankless. Endless hot water and a smaller gas bill — wrapped up in a day.</span></span></figcaption>
+          </figure>
+
+          <figure class="job" data-cat="drains" data-reveal>
+            <div class="ba" style="--pos:30%">
+              <div class="ba-pane ba-after"><span class="ba-glyph"><i data-lucide="waves"></i></span></div>
+              <div class="ba-pane ba-before"><span class="ba-glyph"><i data-lucide="waves"></i></span></div>
+              <span class="ba-lab lab-before">Before</span>
+              <span class="ba-lab lab-after">After</span>
+              <div class="ba-handle" role="slider" tabindex="0" aria-label="Drag to compare before and after"><i data-lucide="chevrons-left-right"></i></div>
+            </div>
+            <figcaption><span class="job-ic"><i data-lucide="waves"></i></span><span class="job-meta"><b>Main line cleared &amp; jetted</b><span class="job-cat">Wedgwood · Drains</span><span class="job-desc">Camera-scoped a sluggish main line, then hydro-jetted out grease and roots. Re-scoped after to make sure it runs clear.</span></span></figcaption>
+          </figure>
+
+          <figure class="job" data-cat="leaks" data-reveal>
+            <div class="ba" style="--pos:30%">
+              <div class="ba-pane ba-after"><span class="ba-glyph"><i data-lucide="droplets"></i></span></div>
+              <div class="ba-pane ba-before"><span class="ba-glyph"><i data-lucide="droplets"></i></span></div>
+              <span class="ba-lab lab-before">Before</span>
+              <span class="ba-lab lab-after">After</span>
+              <div class="ba-handle" role="slider" tabindex="0" aria-label="Drag to compare before and after"><i data-lucide="chevrons-left-right"></i></div>
+            </div>
+            <figcaption><span class="job-ic"><i data-lucide="droplets"></i></span><span class="job-meta"><b>Slab leak found &amp; sealed</b><span class="job-cat">West Seattle · Leaks</span><span class="job-desc">Acoustic gear pinpointed a slab leak under the hall. Rerouted the line through the wall instead of opening the whole floor.</span></span></figcaption>
+          </figure>
+
+          <figure class="job" data-cat="repiping" data-reveal>
+            <div class="ba" style="--pos:30%">
+              <div class="ba-pane ba-after"><span class="ba-glyph"><i data-lucide="git-branch"></i></span></div>
+              <div class="ba-pane ba-before"><span class="ba-glyph"><i data-lucide="git-branch"></i></span></div>
+              <span class="ba-lab lab-before">Before</span>
+              <span class="ba-lab lab-after">After</span>
+              <div class="ba-handle" role="slider" tabindex="0" aria-label="Drag to compare before and after"><i data-lucide="chevrons-left-right"></i></div>
+            </div>
+            <figcaption><span class="job-ic"><i data-lucide="git-branch"></i></span><span class="job-meta"><b>Galvanized lines to PEX</b><span class="job-cat">Queen Anne · Repiping</span><span class="job-desc">Pulled failing galvanized supply lines and ran a full PEX repipe. Stronger pressure at every tap, done in two days.</span></span></figcaption>
+          </figure>
+
+          <figure class="job" data-cat="fixtures" data-reveal>
+            <div class="ph">
+              <span class="tag">Sample · work photo</span>
+              <span class="glyph"><i data-lucide="shower-head"></i><span class="cap">Finished job</span></span>
+            </div>
+            <figcaption><span class="job-ic"><i data-lucide="shower-head"></i></span><span class="job-meta"><b>New vanity, faucet &amp; valves</b><span class="job-cat">Greenwood · Fixtures</span><span class="job-desc">New vanity, faucet, and shut-off valves set clean and level. Swapped the corroded supply lines while we were in there.</span></span></figcaption>
+          </figure>
+
+          <figure class="job" data-cat="water-heaters" data-reveal>
+            <div class="ph">
+              <span class="tag">Sample · work photo</span>
+              <span class="glyph"><i data-lucide="flame"></i><span class="cap">Finished job</span></span>
+            </div>
+            <figcaption><span class="job-ic"><i data-lucide="flame"></i></span><span class="job-meta"><b>Leaking heater replaced</b><span class="job-cat">Shoreline · Water heaters</span><span class="job-desc">Pulled the failed heater the morning they called and set a new high-efficiency tank same day. Hot water back by dinner.</span></span></figcaption>
+          </figure>
+
+        </div>
+        <p class="landing_work_foot" data-reveal><i data-lucide="image"></i>Sample layout — drop in your real before/after photos and they slot straight in, tagged by service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Why us ============ -->
+<section class="section_landing-why">
+  <svg class="sec-wave sec-wave-top" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48 L0 24 C240 12 480 12 720 24 C960 36 1200 36 1440 24 L1440 48 Z"/></svg>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-large">
+        <div class="landing_why_component">
+          <div class="landing_why_photo" data-reveal>
+            <div class="ph ph-owner">
+              <span class="tag">Sample · your photo here</span>
+              <span class="glyph"><i data-lucide="user-round"></i><span class="cap">Owner portrait</span></span>
+              <span class="label"><b>Mark Cornish</b><span>Owner · Master plumber</span></span>
+            </div>
+            <div class="landing_why_float">
+              <span class="n">17</span>
+              <span class="l">years turning wrenches in Seattle</span>
+            </div>
+          </div>
+          <div class="landing_why_copy" data-reveal>
+            <p class="eyebrow">Why folks in Seattle call us back</p>
+            <p><span class="name">I'm Mark Cornish</span>, and I've been turning wrenches in Seattle for 17 years. I started Cornerstone Plumbing because I was tired of watching big outfits upsell people on repairs they didn't need.</p>
+            <p>Here's how we do it: we show up when we say we will, we explain what's actually wrong in plain language, and we give you the price before we start — not after. If something isn't worth fixing, we'll tell you, even when it costs us the job. That's the whole reason most of our work comes from neighbors telling neighbors.</p>
+            <div class="landing_why_badges">
+              <span class="pill"><i data-lucide="shield-check"></i>Licensed #PL-12345</span>
+              <span class="pill"><i data-lucide="badge-check"></i>Fully insured</span>
+              <span class="pill"><i data-lucide="star" class="star"></i>4.9 on Google</span>
+              <span class="pill"><i data-lucide="award"></i>PHCC member</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ How it works ============ -->
+<section class="section_landing-how">
+  <svg class="sec-wave sec-wave-bottom" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48 L0 24 C240 12 480 12 720 24 C960 36 1200 36 1440 24 L1440 48 Z"/></svg>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-large">
+        <div class="landing_section-head" data-reveal>
+          <p class="eyebrow">How it works</p>
+          <h2 class="h2">Straightforward, every time</h2>
+        </div>
+        <div class="landing_how_component" id="steps">
+          <span class="landing_how_track"></span>
+          <div class="landing_how_step" data-reveal>
+            <div class="landing_how_step__badge"><i data-lucide="calendar-check"></i><span class="num">1</span></div>
+            <div class="landing_how_step__body">
+              <h3 class="h3">You book or call</h3>
+              <p>Pick a time above or call (206) 555-0142. Tell us roughly what's going on — that's all we need to get rolling.</p>
+            </div>
+          </div>
+          <div class="landing_how_step" data-reveal>
+            <div class="landing_how_step__badge"><i data-lucide="clipboard-check"></i><span class="num">2</span></div>
+            <div class="landing_how_step__body">
+              <h3 class="h3">We look and we quote</h3>
+              <p>We come out, find the real problem, and give you a clear price up front. The estimate is free, and you decide before any work starts.</p>
+            </div>
+          </div>
+          <div class="landing_how_step" data-reveal>
+            <div class="landing_how_step__badge"><i data-lucide="wrench"></i><span class="num">3</span></div>
+            <div class="landing_how_step__body">
+              <h3 class="h3">We fix it right</h3>
+              <p>We do the job clean, test it, and leave your place the way we found it — minus the problem. Most jobs are done same day.</p>
+            </div>
+          </div>
+        </div>
+        <div class="landing_how_punch" data-reveal>
+          <span class="qic"><i data-lucide="handshake"></i></span>
+          <p>No surprise charges. No pressure. <span class="hl">If it's not worth fixing, we'll say so.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Reviews ============ -->
+<section class="section_landing-reviews" id="reviews">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-medium">
+        <div class="landing_section-head" data-reveal>
+          <p class="eyebrow">What neighbors say</p>
+          <h2 class="h2">4.9 ★ average from 312 Google reviews</h2>
+        </div>
+        <div class="landing_reviews_component">
+          <div class="landing_reviews_summary" data-reveal>
+            <div class="big">4.9</div>
+            <div class="gstars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+            <p class="cnt">Averaged across 312 verified Google reviews from Seattle homeowners. We don't filter the four-stars.</p>
+            <span class="gbadge"><i data-lucide="badge-check"></i><span class="g">Google</span> verified reviews</span>
+            <a class="btn btn-on-dark rev-seeall" href="https://www.google.com/maps" target="_blank" rel="noopener">Read all 312 on Google<i data-lucide="external-link"></i></a>
+          </div>
+          <div class="landing_reviews_col">
+            <div class="rev-list" id="revList" data-reveal>
+              <div class="rev">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">May 2026</span></div>
+                <p>"Called Sunday morning — Mark's tech was out by noon, fixed a slab leak, and gave a clear price up front. They've been our plumber for six years now."</p>
+                <div class="by"><span class="av">MR</span><div><b>Maria R.</b><span>Ballard</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Apr 2026</span></div>
+                <p>"Replaced a 50-gallon tank with a tankless on a weekend. Clean install, walked me through how it works, and the price matched the quote on the phone."</p>
+                <div class="by"><span class="av">DT</span><div><b>Devon T.</b><span>Wedgwood</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Apr 2026</span></div>
+                <p>"Camera inspection found roots in the line. They scoped a trenchless repair and saved my driveway. Honest about what was actually wrong."</p>
+                <div class="by"><span class="av">PS</span><div><b>Priya S.</b><span>West Seattle</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Mar 2026</span></div>
+                <p>"Woke up to no hot water before a houseful of guests. Mark squeezed us in same day and had a new heater in by early afternoon. Lifesaver."</p>
+                <div class="by"><span class="av">JK</span><div><b>James K.</b><span>Queen Anne</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Mar 2026</span></div>
+                <p>"Whole-house repipe from old galvanized to PEX. The crew was tidy, on time every day, and the water pressure is night and day. Worth every penny."</p>
+                <div class="by"><span class="av">LM</span><div><b>Lena M.</b><span>Greenwood</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Feb 2026</span></div>
+                <p>"Kitchen drain kept backing up. They cleared it, then showed me on the camera why it was happening so I could avoid it next time. Really straight shooters."</p>
+                <div class="by"><span class="av">TB</span><div><b>Tom B.</b><span>Shoreline</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev rev-more hidden">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Jan 2026</span></div>
+                <p>"Pipe burst during the cold snap. I called at 6am and someone actually answered — they shut it off, dried us out, and repaired it the same morning."</p>
+                <div class="by"><span class="av">AN</span><div><b>Aisha N.</b><span>Bellevue</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev rev-more hidden">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star" class="empty"></i></span><span class="date">Jan 2026</span></div>
+                <p>"Great work installing two new faucets and a disposal. Took a day longer to schedule than I'd hoped, but the quality and the upfront pricing made up for it."</p>
+                <div class="by"><span class="av">CV</span><div><b>Carlos V.</b><span>Kirkland</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev rev-more hidden">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Dec 2025</span></div>
+                <p>"Sewer scope found a cracked section out near the street. They marked exactly where it was and did a spot repair instead of selling me a full replacement."</p>
+                <div class="by"><span class="av">NP</span><div><b>Nadia P.</b><span>Fremont</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev rev-more hidden">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Dec 2025</span></div>
+                <p>"Ran a new gas line for our range. Permitted, inspected, and done without any drama. They explained each step so I knew what I was paying for."</p>
+                <div class="by"><span class="av">GH</span><div><b>Greg H.</b><span>Magnolia</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev rev-more hidden">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Nov 2025</span></div>
+                <p>"Old building, seized shutoff valves everywhere. They replaced them all and labeled each one. First plumber who actually left things better than they found them."</p>
+                <div class="by"><span class="av">SL</span><div><b>Sofia L.</b><span>Capitol Hill</span></div><span class="src">Google</span></div>
+              </div>
+              <div class="rev rev-more hidden">
+                <div class="top"><span class="stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></span><span class="date">Nov 2025</span></div>
+                <p>"Water pressure was all over the place. They put in a new regulator and a filter, and now it's steady everywhere in the house. Fair price, no upsell."</p>
+                <div class="by"><span class="av">RO</span><div><b>Ray O.</b><span>Columbia City</span></div><span class="src">Google</span></div>
+              </div>
+            </div>
+            <button class="btn btn-ghost rev-loadmore" id="revLoadMore" type="button">Load more reviews<i data-lucide="chevron-down"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section_landing-faq" id="faq">
+  <svg class="sec-wave sec-wave-top" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48 L0 24 C240 12 480 12 720 24 C960 36 1200 36 1440 24 L1440 48 Z"/></svg>
+  <svg class="sec-wave sec-wave-bottom" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48 L0 24 C240 12 480 12 720 24 C960 36 1200 36 1440 24 L1440 48 Z"/></svg>
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-large">
+        <div class="landing_section-head" data-reveal>
+          <p class="eyebrow">Straight answers</p>
+          <h2 class="h2">The questions everyone asks</h2>
+        </div>
+        <span class="landing_faq_free" data-reveal><i data-lucide="circle-check"></i>Free estimate · you approve the price first</span>
+        <div class="landing_faq_component" data-reveal-group>
+          <details class="faq" data-reveal open>
+            <summary>Do you charge for an estimate?<span class="pm"><i data-lucide="plus"></i></span></summary>
+            <div class="ans">No — estimates are free. We come out, diagnose the problem, and give you a price before any work starts. You decide from there.</div>
+          </details>
+          <details class="faq" data-reveal>
+            <summary>Is there a service call fee?<span class="pm"><i data-lucide="plus"></i></span></summary>
+            <div class="ans">There's an $89 service call fee to come out and diagnose the problem — and we credit it toward your repair if you hire us. So if we do the work, the visit's effectively free.</div>
+          </details>
+          <details class="faq" data-reveal>
+            <summary>What will the job cost?<span class="pm"><i data-lucide="plus"></i></span></summary>
+            <div class="ans">
+              Every home's different, so the honest answer is "we'll confirm once we see it." But to give you a ballpark from similar jobs around Seattle:
+              <ul class="ranges">
+                <li>Drain cleaning <b>about $189–$450</b></li>
+                <li>Water heater replacement <b>about $1,850–$3,400</b></li>
+                <li>Leak repair <b>about $250–$1,200</b></li>
+                <li>Hourly rate <b>about $150/hr</b></li>
+              </ul>
+              Most common repairs take 1–3 hours.
+              <div class="note"><i data-lucide="info"></i><span>These are guides, not quotes — we confirm the exact price before we start, and you approve it first.</span></div>
+            </div>
+          </details>
+          <details class="faq" data-reveal>
+            <summary>Are you licensed and insured?<span class="pm"><i data-lucide="plus"></i></span></summary>
+            <div class="ans">Yes. License #PL-12345, fully insured. Happy to show proof on request.</div>
+          </details>
+          <details class="faq" data-reveal>
+            <summary>Do you handle emergencies?<span class="pm"><i data-lucide="plus"></i></span></summary>
+            <div class="ans">Yes. Burst pipes, major leaks, no water — call (206) 555-0142 and we'll get to you fast, including after hours.</div>
+          </details>
+          <details class="faq" data-reveal>
+            <summary>How soon can you come out?<span class="pm"><i data-lucide="plus"></i></span></summary>
+            <div class="ans">Often same day for Seattle and nearby. Book a time above or call and we'll find the soonest slot.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Service area ============ -->
+<section class="section_landing-area">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-medium">
+        <div class="landing_area_component">
+          <div data-reveal>
+            <p class="eyebrow">Where we work</p>
+            <h2 class="h2 landing_area_heading">Based in Seattle, serving the surrounding area</h2>
+            <div class="landing_area_chips">
+              <span class="chip primary"><i data-lucide="map-pin"></i>Seattle</span>
+              <span class="chip">Ballard</span>
+              <span class="chip">Queen Anne</span>
+              <span class="chip">West Seattle</span>
+              <span class="chip">Shoreline</span>
+              <span class="chip">Bellevue</span>
+              <span class="chip">Kirkland</span>
+              <span class="chip">Greenwood</span>
+            </div>
+            <p class="landing_area_note">Not sure if you're in range? Call <a href="tel:+12065550142">(206) 555-0142</a> — if we can't help, we'll point you to someone who can.</p>
+          </div>
+          <div class="landing_area_map ph" data-reveal>
+            <span class="tag">Illustrative</span>
+            <span class="glyph"><i data-lucide="map"></i><span class="cap">Service-area map</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Final CTA band ============ -->
+<section class="section_landing-cta">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="padding-section-small">
+        <div class="landing_cta_band" data-reveal>
+          <svg class="pat" aria-hidden="true" width="100%" height="100%"><defs><pattern id="pp" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M0 32 H24 M40 32 H64 M32 0 V24 M32 40 V64" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="none"/><circle cx="32" cy="32" r="4" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" fill="none"/></pattern></defs><rect width="100%" height="100%" fill="url(#pp)"/></svg>
+          <div class="landing_cta_inner">
+            <div class="landing_cta_copy">
+              <h2>Got a plumbing problem? Let's take a look.</h2>
+              <p>Free estimate, upfront pricing, and a straight answer. Pick a time or give Mark a call.</p>
+            </div>
+            <div class="landing_cta_actions">
+              <a class="btn btn-primary btn-lg" href="#" data-book-modal>See available times<i data-lucide="arrow-right"></i></a>
+              <a class="calllink" href="tel:+12065550142"><i data-lucide="phone"></i>Or call <span class="u">(206) 555-0142</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Footer (minimal, no nav columns) ============ -->
+<footer class="landing_footer">
+  <div class="padding-global">
+    <div class="container-large">
+      <div class="landing_footer_top">
+        <div class="brand">
+          <span class="mk">C</span>
+          <span class="brand-text"><span class="nm">Cornerstone Plumbing</span><span class="sub">Seattle &amp; nearby</span></span>
+        </div>
+        <div class="landing_footer_meta">
+          <b>Cornerstone Plumbing</b> · License #PL-12345 · Mon–Sat 7 a.m.–7 p.m.<br />
+          Serving Seattle, Ballard, Queen Anne, West Seattle, Shoreline, Bellevue &amp; Kirkland.
+        </div>
+        <div class="landing_footer_contact">
+          <a class="landing_footer_phone" href="tel:+12065550142"><i data-lucide="phone"></i>(206) 555-0142</a>
+          <span class="landing_footer_rate"><span class="stars"><i data-lucide="star"></i></span>4.9 on Google (312 reviews)</span>
+        </div>
+      </div>
+      <div class="landing_footer_fine">© 2026 Cornerstone Plumbing. Licensed #PL-12345, bonded &amp; insured in Washington State. Pricing ranges and reviews shown are illustrative samples for this demo and must be replaced with the client's confirmed figures and verbatim Google reviews before go-live.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ Booking modal ============ -->
+<div class="modal" id="bookModal" aria-hidden="true">
+  <div class="modal-overlay" data-close></div>
+  <div class="modal-card">
+    <button class="modal-x" type="button" data-close aria-label="Close"><i data-lucide="x"></i></button>
+    <div class="sched" id="modal-scheduler" aria-label="Book a visit"></div>
+  </div>
+</div>
+
+<!-- ============ Sticky mobile call bar ============ -->
+<div class="callbar">
+  <span class="dot"></span>
+  <div class="txt"><b>Call Mark — (206) 555-0142</b><span>Licensed · 4.9★ · Seattle</span></div>
+  <a class="cta" href="tel:+12065550142"><i data-lucide="phone"></i>Call</a>
+</div>
+
+<!-- LocalBusiness / Plumber schema (illustrative — replace before go-live) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Cornerstone Plumbing",
+  "telephone": "+1-206-555-0142",
+  "areaServed": ["Seattle","Ballard","Queen Anne","West Seattle","Shoreline","Bellevue","Kirkland","Greenwood"],
+  "address": {"@type": "PostalAddress","addressLocality": "Seattle","addressRegion": "WA","addressCountry": "US"},
+  "openingHours": "Mo-Sa 07:00-19:00",
+  "aggregateRating": {"@type": "AggregateRating","ratingValue": "4.9","reviewCount": "312"}
+}
+</script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="app.js"></script>
+</body>
+</html>
