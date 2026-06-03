@@ -64,6 +64,16 @@ a { color: var(--accent); text-decoration: none; }
 .btn-outline-cta { background: var(--paper); color: var(--cta); border-color: var(--cta); }
 .btn-outline-cta:hover:not(:disabled) { background: var(--cta); color: var(--on-cta); }
 .btn-outline-cta.is-solid { background: var(--cta); color: var(--on-cta); border-color: var(--cta); }
+#headerCta.btn-outline-cta.is-solid:not(:disabled) {
+   transform-origin: center;
+   animation: schedCtaColor 3.2s var(--ease) infinite;
+}
+#headerCta.btn-outline-cta.is-solid:not(:disabled):hover {
+   animation: schedHeartbeat 1.4s var(--ease) infinite;
+   background: var(--cta-hover);
+   border-color: var(--cta-hover);
+   box-shadow: 0 12px 26px -8px rgba(226,73,29,0.5);
+}
 .btn-ghost { background: var(--paper); color: var(--fg); border-color: var(--line-strong); }
 .btn-ghost:hover { background: var(--paper-2); border-color: var(--accent); color: var(--accent); }
 .btn-lg { padding: 16px 26px; font-size: 16px; }
@@ -85,11 +95,24 @@ a { color: var(--accent); text-decoration: none; }
   background: var(--cta-hover);
   box-shadow: 0 12px 26px -8px rgba(226,73,29,0.5);
 }
-@keyframes schedCtaColor { 0%, 100% { background-color: var(--cta); } 50% { background-color: var(--cta-hover); } }
+@keyframes schedCtaColor {
+   0%, 100% { background-color: var(--cta); }
+   44%, 56% { background-color: var(--cta-hover); }
+   50% { background-color: var(--cta-press); }
+}
 @keyframes schedHeartbeat { 0% { transform: scale(1,1); } 12% { transform: scale(1.015,1.06); } 24% { transform: scale(1,1); } 36% { transform: scale(1.015,1.06); } 52%,100% { transform: scale(1,1); } }
+
+/* Footer CTA "See available times" — same effect as scheduler */
+.landing_cta_actions .btn-primary:not(:disabled) { transform-origin: center; animation: schedCtaColor 3.2s var(--ease) infinite; }
+.landing_cta_actions .btn-primary:not(:disabled):hover { animation: schedHeartbeat 1.4s var(--ease) infinite; background: var(--cta-hover); box-shadow: 0 12px 26px -8px rgba(226,73,29,0.5); }
+
 @media (prefers-reduced-motion: reduce) {
+   #headerCta.btn-outline-cta.is-solid:not(:disabled),
+   #headerCta.btn-outline-cta.is-solid:not(:disabled):hover,
   .sched-steps .btn-primary:not(:disabled),
-  .sched-steps .btn-primary:not(:disabled):hover { animation: none !important; }
+  .sched-steps .btn-primary:not(:disabled):hover,
+  .landing_cta_actions .btn-primary:not(:disabled),
+  .landing_cta_actions .btn-primary:not(:disabled):hover { animation: none !important; }
 }
 
 /* phone link with subtle underline-grow */
@@ -371,13 +394,16 @@ a { color: var(--accent); text-decoration: none; }
 ============================================================= */
 .landing_reviews_component { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: clamp(24px, 3vw, 40px); align-items: start; }
 @media (max-width: 860px) { .landing_reviews_component { grid-template-columns: 1fr; } }
-.landing_reviews_summary { background: var(--ink); color: var(--paper); border-radius: var(--r4); padding: 30px; position: relative; overflow: hidden; }
+.landing_reviews_summary { display: block; text-decoration: none; background: var(--ink); color: var(--paper); border-radius: var(--r4); padding: 30px; position: relative; overflow: hidden; box-shadow: var(--shadow-md); transition: background 280ms var(--ease), box-shadow 280ms var(--ease), transform 280ms var(--ease); }
+.landing_reviews_summary:hover { background: var(--accent-deep); box-shadow: 0 12px 40px rgba(26,60,140,0.32), 0 2px 8px rgba(26,60,140,0.16); transform: translateY(-2px); }
 @media (min-width: 861px) { .landing_reviews_summary { position: sticky; top: 88px; } }
 .landing_reviews_summary .big { font-family: var(--font-display); font-weight: 800; font-size: 64px; letter-spacing: -0.03em; line-height: 1; }
 .landing_reviews_summary .gstars { display: inline-flex; gap: 2px; color: var(--star); margin-top: 8px; }
 .landing_reviews_summary .gstars [data-lucide] { width: 18px; height: 18px; fill: currentColor; }
 .landing_reviews_summary .cnt { color: rgba(255,255,255,0.7); font-size: 14px; margin-top: 12px; line-height: 1.5; }
-.landing_reviews_summary .gbadge { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; padding: 9px 13px; border-radius: var(--rf); background: rgba(255,255,255,0.08); font-size: 12.5px; font-weight: 600; }
+.landing_reviews_summary .gbadge { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; padding: 9px 13px; border-radius: var(--rf); background: rgba(255,255,255,0.08); font-size: 12.5px; font-weight: 600; transition: background 220ms var(--ease), color 220ms var(--ease); cursor: pointer; }
+.landing_reviews_summary:hover .gbadge,
+.landing_reviews_summary .gbadge:hover { background: rgba(255,255,255,0.18); color: var(--paper); }
 .landing_reviews_summary .gbadge .g { font-family: var(--font-display); font-weight: 800; }
 .rev-seeall { margin-top: 22px; width: 100%; }
 .rev-seeall [data-lucide] { width: 16px; height: 16px; }
